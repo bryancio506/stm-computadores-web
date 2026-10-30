@@ -33,6 +33,14 @@ También puede subir directamente el contenido de `dist/` a Netlify Drop.
 
 No hay WhatsApp simulado ni mensajes enviados por el sitio. Antes de anunciar campañas, conviene probar los enlaces con el dispositivo que usará el visitante y confirmar que los datos comerciales siguen vigentes.
 
+## Microsoft y carruseles
+
+- La portada y la sección de Microsoft 365 destacan la relación de STM como **partner de Microsoft**, confirmada por Bryan. El logo corporativo y los iconos de Outlook, Teams, OneDrive y SharePoint se conservan tal como se descargaron de Microsoft.
+- Los logos de clientes se desplazan en bucle; se pueden pausar con el botón, al pasar el cursor o al enfocar un enlace.
+- El panel de servicios avanza cada ocho segundos cuando está visible. Se pausa al pasar el cursor o enfocar contenido; seleccionar una pestaña detiene el avance hasta que se active de nuevo.
+- La preferencia del sistema de reducir movimiento desactiva el desplazamiento y el recorrido automático de forma predeterminada.
+- Procedencia de los recursos: `docs/fuentes-microsoft.md`. La mención de partner es texto comercial; no se añadió un sello de certificación o categoría específica.
+
 ## Edición
 
 - `dist/index.html`: textos, servicios, contactos y SEO.

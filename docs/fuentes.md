@@ -7,6 +7,7 @@
 - WhatsApp +506 8373-5850 y correo olgermr@stmcomputadores.com: confirmados expresamente por Bryan Romero para esta web el 29 de octubre de 2026.
 - Oferta de Microsoft 365, Power BI, Power Apps y Power Automate: confirmada en el contexto de trabajo compartido por Bryan. Los textos son descripciones comerciales de servicios; no se publican incidentes, configuraciones, números de horas ni resultados internos de clientes.
 - No se inventaron testimonios, SLA, certificaciones, premios, porcentajes de mejora ni métricas de clientes. No se presenta a los clientes como autores de recomendaciones.
+- Relación de STM como partner de Microsoft: confirmada expresamente por Bryan al solicitar destacarla en esta web. Se menciona esa relación sin atribuir niveles Gold/Silver, designaciones Solutions Partner ni certificaciones no aportadas. Recursos de producto y marca en `fuentes-microsoft.md`.
 
 ## Fotografías
 

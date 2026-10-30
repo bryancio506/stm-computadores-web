@@ -13,5 +13,10 @@ Revisión del 29 de octubre de 2026, previa a la entrega para publicación por B
 - Texto ingresado tratado como texto; no se interpreta HTML.
 - Página de privacidad disponible, enlaces internos y recursos locales comprobados.
 - Miniatura social de 1200 × 630 generada desde `preview/social-card.html`.
+- Actualización Microsoft: logo corporativo oficial y cuatro iconos de aplicaciones cargados; presentación revisada en escritorio y celular. Mención de partner aportada por Bryan.
+- Carrusel de clientes: movimiento real comprobado, pausa al pasar el cursor y controles de pausa/reanudación. La copia decorativa no introduce enlaces adicionales en la navegación de teclado.
+- Servicios: avance automático de ocho segundos comprobado con tiempo real; pausa comprobada durante otro intervalo completo y detención al seleccionar una pestaña.
+- Preferencia de reducir movimiento: recorrido automático desactivado y clientes estáticos sin duplicar los logos.
+- Actualización comprobada a 360, 390, 700, 768, 1024 y 1440 px sin desbordamiento ni errores de JavaScript.
 
 No se enviaron consultas ni correos reales y no se publicó en Netlify. La persona que visita el sitio decide abrir WhatsApp o correo y realizar el envío. Las capturas de revisión se guardaron fuera del repositorio, en `/tmp/`.

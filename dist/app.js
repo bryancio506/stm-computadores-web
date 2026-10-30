@@ -30,7 +30,35 @@ document.addEventListener('click', event => {
 });
 
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
-function activateTab(tab, focus = false) {
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const solutionPanels = document.querySelector('#solution-panels');
+const solutionsMotion = document.querySelector('#solutions-motion');
+let serviceAutoplay = !motionPreference.matches;
+let serviceTimer;
+let servicesInView = false;
+let servicesHovered = false;
+let servicesFocused = false;
+
+function scheduleServiceRotation() {
+  window.clearTimeout(serviceTimer);
+  if (!serviceAutoplay || !servicesInView || servicesHovered || servicesFocused || document.hidden) return;
+  serviceTimer = window.setTimeout(() => {
+    const current = tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
+    activateTab(tabs[(current + 1) % tabs.length], false, true);
+    scheduleServiceRotation();
+  }, 8000);
+}
+
+function setServiceAutoplay(enabled) {
+  serviceAutoplay = enabled;
+  solutionsMotion.setAttribute('aria-pressed', String(!enabled));
+  solutionsMotion.querySelector('.motion-symbol').textContent = enabled ? 'Ⅱ' : '▷';
+  solutionsMotion.querySelector('.motion-label').textContent = enabled ? 'Pausar recorrido' : 'Activar recorrido';
+  scheduleServiceRotation();
+}
+
+function activateTab(tab, focus = false, automatic = false) {
+  if (!automatic) setServiceAutoplay(false);
   tabs.forEach(item => {
     const selected = item === tab;
     item.setAttribute('aria-selected', String(selected));
@@ -52,6 +80,66 @@ tabs.forEach((tab, index) => {
       activateTab(tabs[next], true);
     }
   });
+});
+
+if (solutionPanels && solutionsMotion) {
+  solutionsMotion.hidden = false;
+  setServiceAutoplay(serviceAutoplay);
+  solutionsMotion.addEventListener('click', () => setServiceAutoplay(!serviceAutoplay));
+  const servicesObserver = new IntersectionObserver(entries => {
+    servicesInView = entries[0].isIntersecting;
+    scheduleServiceRotation();
+  }, { threshold: 0.15 });
+  servicesObserver.observe(solutionPanels);
+  solutionPanels.addEventListener('pointerenter', event => {
+    if (event.pointerType !== 'mouse') return;
+    servicesHovered = true;
+    scheduleServiceRotation();
+  });
+  solutionPanels.addEventListener('pointerleave', event => {
+    if (event.pointerType !== 'mouse') return;
+    servicesHovered = false;
+    scheduleServiceRotation();
+  });
+  solutionPanels.addEventListener('focusin', () => {
+    servicesFocused = true;
+    scheduleServiceRotation();
+  });
+  solutionPanels.addEventListener('focusout', event => {
+    servicesFocused = solutionPanels.contains(event.relatedTarget);
+    scheduleServiceRotation();
+  });
+  document.addEventListener('visibilitychange', scheduleServiceRotation);
+}
+
+const clientViewport = document.querySelector('#client-viewport');
+const clientTrack = document.querySelector('.client-track');
+const clientGroup = document.querySelector('#client-logos');
+const clientMotion = document.querySelector('#client-motion');
+if (clientTrack && clientGroup && clientMotion) {
+  const copy = clientGroup.cloneNode(true);
+  copy.removeAttribute('id');
+  copy.setAttribute('aria-hidden', 'true');
+  copy.querySelectorAll('a').forEach(link => link.tabIndex = -1);
+  clientTrack.append(copy);
+  clientTrack.classList.add('is-animated');
+  clientMotion.hidden = motionPreference.matches;
+  const sizeObserver = new ResizeObserver(entries => {
+    clientViewport.style.setProperty('--clients-width', `${entries[0].contentRect.width}px`);
+  });
+  sizeObserver.observe(clientViewport);
+  clientMotion.addEventListener('click', () => {
+    const paused = clientMotion.getAttribute('aria-pressed') !== 'true';
+    clientMotion.setAttribute('aria-pressed', String(paused));
+    clientTrack.classList.toggle('is-paused', paused);
+    clientMotion.querySelector('.motion-symbol').textContent = paused ? '▷' : 'Ⅱ';
+    clientMotion.querySelector('.motion-label').textContent = paused ? 'Activar movimiento' : 'Pausar movimiento';
+  });
+}
+
+motionPreference.addEventListener('change', event => {
+  setServiceAutoplay(!event.matches);
+  if (clientMotion) clientMotion.hidden = event.matches;
 });
 
 const form = document.querySelector('#contact-form');
