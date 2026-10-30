@@ -36,6 +36,7 @@ No hay WhatsApp simulado ni mensajes enviados por el sitio. Antes de anunciar ca
 
 ## Microsoft y carruseles
 
+- El carrusel reúne cinco soluciones: soporte técnico multiplataforma, redes, videovigilancia CCTV, Microsoft 365 y datos/automatización. Windows, macOS y Linux se destacan en el soporte para mantener compacto el diseño.
 - La portada y la sección de Microsoft 365 destacan la relación de STM como **partner de Microsoft**, confirmada por Bryan. El logo corporativo y los iconos de Outlook, Teams, OneDrive y SharePoint se conservan tal como se descargaron de Microsoft.
 - Los logos de clientes se desplazan en bucle; se pueden pausar con el botón, al pasar el cursor o al enfocar un enlace.
 - El panel de servicios avanza cada ocho segundos cuando está visible. Se pausa al pasar el cursor o enfocar contenido; seleccionar una pestaña detiene el avance hasta que se active de nuevo.

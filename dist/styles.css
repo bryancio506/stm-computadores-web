@@ -47,3 +47,22 @@
 @media(max-width:700px){.hero-partner{margin-top:28px;max-width:350px}.hero-partner>img{width:95px}.hero-partner strong{font-size:11px}.hero-partner>div>span{font-size:8px}.clients-carousel{margin-top:23px}.client-track.is-animated .client-logos{width:880px;gap:24px;padding-inline:12px}.client-track.is-animated .client-logos>a{max-width:170px;min-height:63px}.client-track.is-animated .client-logos img{max-width:155px;max-height:43px}.client-track.is-animated .darko-tile img,.client-track.is-animated .jr-tile img{max-width:120px;max-height:35px}.client-controls .motion-control{font-size:8px}.solutions-controls{margin-top:14px;gap:12px}.solutions-controls>span{font-size:6px;letter-spacing:.08em}.solutions-controls .motion-control{font-size:8px;padding:5px 7px}.microsoft-art{padding-block:28px 47px;gap:17px;min-height:360px}.microsoft-art .app-tiles{width:76%;max-width:340px;gap:9px}.microsoft-art .app-tiles>span{grid-template-columns:32px 1fr;padding:15px 13px;column-gap:9px}.microsoft-art .app-tiles img{width:32px;height:32px}.microsoft-art .app-tiles strong{font-size:11px}.microsoft-art .app-tiles small{font-size:5px}.microsoft-product-brand>strong{font-size:31px}.microsoft-product-brand>img{width:108px;margin-bottom:9px}}
 @media(prefers-reduced-motion:reduce){.client-track.is-animated{display:block;width:100%;animation:none;transform:none;will-change:auto}.client-track.is-animated .client-logos{width:100%;gap:20px;padding:0}.client-track.is-animated .client-logos[aria-hidden=true]{display:none}.client-controls:has(button[hidden]){display:none}.solution-panels .solution-panel{animation:none}}
 @media(max-width:700px) and (prefers-reduced-motion:reduce){.client-track.is-animated .client-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Complementary services stay inside the existing solution carousel. */
+.solution-tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+.platform-tags{list-style:none;display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:0;margin:17px 0 0}
+.platform-tags>li{font-size:9px;font-weight:650;letter-spacing:.01em;color:#635b7e;border:1px solid #ded9e9;border-radius:4px;padding:4px 11px;line-height:1.5;background:#f8f6fb}
+#panel-soporte .check-list{margin-top:19px}
+.cctv-art{background:#eeeee9}
+.camera-scene{position:relative;width:100%;max-width:500px;padding:25px 15px 40px}
+.camera-heading{display:block;font-size:8px;font-weight:700;letter-spacing:.17em;color:#8d8998;text-align:center}
+.camera-illustration{width:94%;margin:5px auto -30px;filter:drop-shadow(0 17px 17px #2421640b)}
+.camera-coverage{fill:#f16b3212}
+.camera-coverage-line{stroke:#f16b3240;stroke-width:1;stroke-dasharray:4 5}
+.camera-caption{display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:1}
+.camera-caption>span{font-family:var(--display);font-size:14px;font-weight:600;border:1px solid #d5d3dd;border-radius:4px;padding:8px 13px;color:var(--navy);background:#f8f8f4}
+.camera-caption>p{font-size:10px;color:#85808e;line-height:1.65}
+.camera-caption strong{font-weight:700;color:var(--navy)}
+@media(max-width:1150px) and (min-width:901px){.solution-tabs button{font-size:9px;gap:6px;padding-right:8px}.solution-tabs .tab-arrow{font-size:16px}}
+@media(max-width:900px){.solution-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.solution-tabs button:last-child{grid-column:1/-1;max-width:calc(50% - 12px)}}
+@media(max-width:700px){.platform-tags{gap:6px;margin-top:16px}.platform-tags>li{font-size:9px;padding:4px 10px}.camera-scene{max-width:360px;padding:22px 18px 45px}.camera-heading{font-size:7px}.camera-illustration{width:91%;margin-top:2px;margin-bottom:-22px}.camera-caption{gap:13px}.camera-caption>span{font-size:12px;padding:7px 10px}.camera-caption>p{font-size:9px}}

@@ -6,7 +6,7 @@ Revisión del 29 de octubre de 2026, previa a la entrega para publicación por B
 - Chromium: escritorio y celular, sin errores de JavaScript.
 - Sin desbordamiento horizontal en 360, 390, 540, 700, 768, 900, 1024, 1440 y 1920 px.
 - Fotos y cuatro logos cargados. Logos comprobados visualmente, incluidos los fondos oscuros que necesitan Darko y JR Sánchez.
-- Cuatro pestañas de servicios: selección con clic y navegación con flechas, Home y End.
+- Pestañas de servicios: selección con clic y navegación con flechas, Home y End.
 - Menú móvil: apertura, cierre con enlace, cierre con Escape y restauración al cambiar a escritorio.
 - Consulta: servicio preseleccionado, campos opcionales, resumen, edición sin pérdida de datos y rechazo de nombre/mensaje con solo espacios.
 - Mensajes de WhatsApp y correo: destino de Olger correcto y texto codificado con acentos, signos y saltos de línea.
@@ -21,5 +21,6 @@ Revisión del 29 de octubre de 2026, previa a la entrega para publicación por B
 - Corrección de WhatsApp: `wa.me` falló por resolución DNS incluso fuera del sandbox. `api.whatsapp.com/send` y `web.whatsapp.com/send` respondieron HTTP 200. Todos los enlaces usan ahora estas rutas completas.
 - Botones de WhatsApp comprobados con clics reales en Chromium de escritorio y en contexto móvil: barra superior, contacto, pie, botón flotante y resumen del formulario. Se verificaron destino, número 50683735850 y conservación de acentos/saltos/signos. La navegación externa se interceptó en la prueba; no se abrió una cuenta autenticada ni se enviaron mensajes.
 - Sin JavaScript, los enlaces conservan la ruta completa oficial de WhatsApp.
+- Ampliación de servicios: cinco pestañas, incluyendo videovigilancia CCTV; Windows, macOS y Linux visibles en soporte. La consulta de cámaras preselecciona el servicio y lo conserva en el mensaje de WhatsApp. Se revisaron los cinco paneles en 360, 390, 700, 768, 900, 1024 y 1440 px, sin desbordamiento ni errores de JavaScript.
 
 No se enviaron consultas ni correos reales y no se publicó en Netlify. La persona que visita el sitio decide abrir WhatsApp o correo y realizar el envío. Las capturas de revisión se guardaron fuera del repositorio, en `/tmp/`.

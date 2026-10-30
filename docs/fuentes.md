@@ -4,6 +4,7 @@
 
 - Nombre, logo y trayectoria desde el año 2000: identidad local de STM y página pública histórica, [captura del 21 de mayo de 2025](https://web.archive.org/web/20250521103624/https://stmcomputadores.com/).
 - La página histórica ya mencionaba soporte técnico, infraestructura, redes, servidores, Active Directory, ubicación en Belén y teléfono 2293-8058. También mostraba logos de JR Sánchez, Despacho Roma, Darko y Fibrocentro.
+- Se recuperaron también los servicios de videovigilancia CCTV y soporte multiplataforma (Windows, Linux y Mac), presentes en la copia del 21 de mayo de 2025 y en la captura del 27 de febrero de 2025 compartida por Bryan. CCTV se integra como una quinta pestaña; las plataformas se destacan dentro del soporte existente. No se trasladaron como acreditaciones actuales las antiguas menciones a capacitaciones certificadas por marcas.
 - WhatsApp +506 8373-5850 y correo olgermr@stmcomputadores.com: confirmados expresamente por Bryan Romero para esta web el 29 de octubre de 2026.
 - Oferta de Microsoft 365, Power BI, Power Apps y Power Automate: confirmada en el contexto de trabajo compartido por Bryan. Los textos son descripciones comerciales de servicios; no se publican incidentes, configuraciones, números de horas ni resultados internos de clientes.
 - No se inventaron testimonios, SLA, certificaciones, premios, porcentajes de mejora ni métricas de clientes. No se presenta a los clientes como autores de recomendaciones.
