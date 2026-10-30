@@ -1,5 +1,22 @@
 'use strict';
 
+const whatsappPhone = '50683735850';
+
+function whatsappUrl(message = '') {
+  const mobile = navigator.userAgentData?.mobile
+    || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+    || (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  const url = new URL(mobile ? 'https://api.whatsapp.com/send' : 'https://web.whatsapp.com/send');
+  url.searchParams.set('phone', whatsappPhone);
+  if (message) url.searchParams.set('text', message);
+  return url.href;
+}
+
+document.querySelectorAll('a[data-whatsapp]').forEach(link => {
+  const message = new URL(link.href).searchParams.get('text') || '';
+  link.href = whatsappUrl(message);
+});
+
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 
@@ -179,7 +196,7 @@ if (form) {
     ];
     const message = lines.join('\n');
     summary.textContent = message;
-    document.querySelector('#send-whatsapp').href = `https://wa.me/50683735850?text=${encodeURIComponent(message)}`;
+    document.querySelector('#send-whatsapp').href = whatsappUrl(message);
     document.querySelector('#send-email').href = `mailto:olgermr@stmcomputadores.com?subject=${encodeURIComponent('Consulta STM · ' + value('servicio'))}&body=${encodeURIComponent(message)}`;
     form.hidden = true;
     result.hidden = false;

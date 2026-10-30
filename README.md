@@ -30,6 +30,7 @@ También puede subir directamente el contenido de `dist/` a Netlify Drop.
 - El formulario prepara un resumen y enlaces a WhatsApp o al correo del visitante. La persona revisa y realiza el envío. No hay envíos automáticos, almacenamiento de contactos ni backend.
 - Los campos de correo, teléfono y empresa son opcionales; nombre, servicio, mensaje y consentimiento son obligatorios.
 - `dist/privacidad.html` explica el tratamiento del formulario y los servicios externos.
+- Los botones abren WhatsApp Web directamente en computadora y el enlace oficial `api.whatsapp.com/send` en celular. También hay enlaces completos sin JavaScript. Se evita el dominio corto `wa.me`, que no resolvía en la red usada durante la revisión.
 
 No hay WhatsApp simulado ni mensajes enviados por el sitio. Antes de anunciar campañas, conviene probar los enlaces con el dispositivo que usará el visitante y confirmar que los datos comerciales siguen vigentes.
 

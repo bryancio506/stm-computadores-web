@@ -18,5 +18,8 @@ Revisión del 29 de octubre de 2026, previa a la entrega para publicación por B
 - Servicios: avance automático de ocho segundos comprobado con tiempo real; pausa comprobada durante otro intervalo completo y detención al seleccionar una pestaña.
 - Preferencia de reducir movimiento: recorrido automático desactivado y clientes estáticos sin duplicar los logos.
 - Actualización comprobada a 360, 390, 700, 768, 1024 y 1440 px sin desbordamiento ni errores de JavaScript.
+- Corrección de WhatsApp: `wa.me` falló por resolución DNS incluso fuera del sandbox. `api.whatsapp.com/send` y `web.whatsapp.com/send` respondieron HTTP 200. Todos los enlaces usan ahora estas rutas completas.
+- Botones de WhatsApp comprobados con clics reales en Chromium de escritorio y en contexto móvil: barra superior, contacto, pie, botón flotante y resumen del formulario. Se verificaron destino, número 50683735850 y conservación de acentos/saltos/signos. La navegación externa se interceptó en la prueba; no se abrió una cuenta autenticada ni se enviaron mensajes.
+- Sin JavaScript, los enlaces conservan la ruta completa oficial de WhatsApp.
 
 No se enviaron consultas ni correos reales y no se publicó en Netlify. La persona que visita el sitio decide abrir WhatsApp o correo y realizar el envío. Las capturas de revisión se guardaron fuera del repositorio, en `/tmp/`.
