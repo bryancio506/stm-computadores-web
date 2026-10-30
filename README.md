@@ -1,5 +1,7 @@
 # STM Computadores
 
+Sitio público: https://stm-computadores.netlify.app/
+
 Landing comercial de STM, con la identidad original, soluciones para empresas y contacto directo con Olger Murillo. HTML, CSS y JavaScript estáticos, sin dependencias de producción.
 
 ## Ver localmente
@@ -16,8 +18,8 @@ npm run dev
 1. En Netlify, seleccione **Add new project → Import an existing project → GitHub**.
 2. Seleccione `bryancio506/stm-computadores-web` y la rama `main`.
 3. Use `npm run build` como comando de construcción y `dist` como directorio de publicación. `netlify.toml` ya declara ambos.
-4. Publique desde su propia cuenta de Netlify. No se configuró ni ejecutó un despliegue desde este proyecto.
-5. Una vez elegido el dominio, añada su URL completa en canonical, `og:url`, `og:image`, `og:image:secure_url` y `twitter:image` dentro de `dist/index.html`. La imagen social es `assets/compartir-stm.jpg`.
+4. Publique desde su propia cuenta de Netlify. La publicación inicial la realizó Bryan desde su cuenta de Netlify.
+5. El dominio `stm-computadores.netlify.app` ya está configurado en canonical, `og:url`, `og:image`, `og:image:secure_url` y `twitter:image` dentro de `dist/index.html`. Actualice esas etiquetas si cambia el dominio. La imagen social es `assets/compartir-stm.jpg`.
 
 También puede subir directamente el contenido de `dist/` a Netlify Drop.
 
