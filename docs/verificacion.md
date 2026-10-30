@@ -1,0 +1,17 @@
+# Verificación
+
+Revisión del 29 de octubre de 2026, previa a la entrega para publicación por Bryan.
+
+- `npm run build`: JavaScript válido.
+- Chromium: escritorio y celular, sin errores de JavaScript.
+- Sin desbordamiento horizontal en 360, 390, 540, 700, 768, 900, 1024, 1440 y 1920 px.
+- Fotos y cuatro logos cargados. Logos comprobados visualmente, incluidos los fondos oscuros que necesitan Darko y JR Sánchez.
+- Cuatro pestañas de servicios: selección con clic y navegación con flechas, Home y End.
+- Menú móvil: apertura, cierre con enlace, cierre con Escape y restauración al cambiar a escritorio.
+- Consulta: servicio preseleccionado, campos opcionales, resumen, edición sin pérdida de datos y rechazo de nombre/mensaje con solo espacios.
+- Mensajes de WhatsApp y correo: destino de Olger correcto y texto codificado con acentos, signos y saltos de línea.
+- Texto ingresado tratado como texto; no se interpreta HTML.
+- Página de privacidad disponible, enlaces internos y recursos locales comprobados.
+- Miniatura social de 1200 × 630 generada desde `preview/social-card.html`.
+
+No se enviaron consultas ni correos reales y no se publicó en Netlify. La persona que visita el sitio decide abrir WhatsApp o correo y realizar el envío. Las capturas de revisión se guardaron fuera del repositorio, en `/tmp/`.
